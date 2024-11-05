@@ -1,6 +1,9 @@
 import re
 
 def extract_email_or_phone(text):
+    # Remove any '+' symbols from the text
+    text = text.replace('+', '')
+
     # Clean up the input by stripping unwanted characters (like trailing colons, spaces, angle brackets)
     text = text.strip().strip(':<>')
 
