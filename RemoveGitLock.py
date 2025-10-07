@@ -1,4 +1,4 @@
-import subprocess, pathlib
+import subprocess, pathlib  # noqa: E401
 gitdir = subprocess.check_output(["git","rev-parse","--git-dir"], text=True).strip()
 removed = []
 for p in pathlib.Path(gitdir).rglob("*.lock"):
